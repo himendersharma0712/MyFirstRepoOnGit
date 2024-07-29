@@ -1,10 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <cstring>
-#include<string>
-#include<cctype>
-#include <iomanip>
-#include <ctime>
+
 using std::cout;
 using std::cin;
 using std::endl;
