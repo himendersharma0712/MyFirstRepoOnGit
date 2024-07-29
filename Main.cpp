@@ -264,6 +264,9 @@ int sum_of_digits(int n) {    // recursion to find sum of digits
     // Write your code above this line
 }
 
+
+void double_the_value(int* ptr_int);
+
 int main()
 {
 
@@ -441,7 +444,7 @@ while(*marks_ptr != 0)
 
 
 *********************************************/
-
+/*************************************************** 
 int high_value{100};
 int low_value{10};
 
@@ -456,6 +459,49 @@ int* const score_ptr_constant{&high_value};   // A constant pointer
 
 // constant pointer to a constant data type
 const int * const score_ptr_const_const{&high_value};
+
+
+*****************************************************/
+
+
+int value{10};
+int* int_ptr{nullptr};
+
+double_the_value(&value);
+cout << value << endl;
+
+cout << "------------------------" << endl <<  endl;
+
+int_ptr = &value;
+double_the_value(int_ptr);  // 20 * 2
+double_the_value(int_ptr);  // 40 * 2
+double_the_value(int_ptr);  // 80 * 2
+cout << value << endl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
@@ -476,8 +522,10 @@ void set_array(int arr[], size_t size, int value)
   }
 }
 
-
-
+void double_the_value(int* ptr_int)
+{
+  *ptr_int *= 2;
+}
 
 
 
