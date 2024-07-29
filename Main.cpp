@@ -1,12 +1,4 @@
-#include <iostream>
-#include <vector>
-#include <cstring>
 
-using std::cout;
-using std::cin;
-using std::endl;
-using std::vector;
-using std::string;
 
 
 std::vector<int> list;
