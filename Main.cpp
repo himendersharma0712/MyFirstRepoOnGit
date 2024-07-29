@@ -217,6 +217,15 @@ else if (choice == 'l' || choice == 'L')
 
 }
 
+void swap(int* a , int* b)
+{
+  int temp = *a;
+  *a = *b;
+  *b = temp;
+}
+
+
+
 enum Fruit {
  Apple,
  Banana,
@@ -463,7 +472,7 @@ const int * const score_ptr_const_const{&high_value};
 
 *****************************************************/
 
-
+/**************************************
 int value{10};
 int* int_ptr{nullptr};
 
@@ -478,10 +487,17 @@ double_the_value(int_ptr);  // 40 * 2
 double_the_value(int_ptr);  // 80 * 2
 cout << value << endl;
 
+****** */
+
+int num1{100};
+int num2{200};
+
+cout << num1 << "  " << num2 << endl;
 
 
+swap(&num1,&num2);
 
-
+cout << num1 << "  " << num2 << endl;
 
 
 
