@@ -12,7 +12,25 @@ using std::vector;
 using std::string;
 
 
-std::vector<int> list;
+class pen
+{
+   bool IsRefillable{false};
+   float price{};
+   int colors_available{};
+   string Name{};
+
+public:
+
+void Set_attrib(bool,float,int,string);
+
+void Display_attrib(void);
+
+};
+
+class pen* Pen;  // created a class pointer which can store address of an object of that class type
+
+
+vector<int> list;
 char choice{};
 
 void Quit();
@@ -488,7 +506,7 @@ double_the_value(int_ptr);  // 80 * 2
 cout << value << endl;
 
 ****** */
-
+/********************************** 
 int num1{100};
 int num2{200};
 
@@ -498,12 +516,15 @@ cout << num1 << "  " << num2 << endl;
 swap(&num1,&num2);
 
 cout << num1 << "  " << num2 << endl;
+************************************/
 
+pen Trimax; // created an object of class pen
 
+Pen = &Trimax; // assigned the address of the object Trimax to the class pointer of the same class 
 
+Pen->Set_attrib(true,50.0,3,"Trimax"); // accessed function of the class pen to set attributes for Trimax
 
-
-
+Pen->Display_attrib(); // accessed function of the class pen to display attributes for Trimax
 
 
 
@@ -685,4 +706,28 @@ Display_Scr();
 
 
 
+}
+
+
+void pen::Set_attrib(bool refillable, float price_of_pen, int colors , string Name_pen)
+{
+  IsRefillable = refillable;
+  price = price_of_pen;
+  colors_available = colors;
+  Name = Name_pen;
+
+}
+
+void pen::Display_attrib()
+{
+   cout << "Name: " << Name << endl;
+   cout << "Price: " << price << endl;
+   cout << "Colors available: " <<colors_available << endl;
+   if(IsRefillable)
+   {
+    cout << "This pen is refillable.";
+   }
+   else{
+    cout << "This pen is not refillable.";
+   }
 }
